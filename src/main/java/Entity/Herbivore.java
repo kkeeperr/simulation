@@ -3,13 +3,18 @@ package Entity;
 public class Herbivore extends Creature {
 
 
-    public Herbivore(Coordinate coordinate, int health, int speed) {
-        super(coordinate, health, speed);
+    public Herbivore(Coordinates position, int health, int speed) {
+        super(position, health, speed);
     }
 
     @Override
-    public char getSymbol() {
-        return 'H';
+    public String getSymbol() {
+        return "\uD83D\uDC30";
+    }
+
+    @Override
+    public void eats() {
+
     }
 
     @Override

@@ -1,14 +1,12 @@
 package Entity;
 
 public class Rock extends Entity {
-
-
-    public Rock(Coordinate coordinate) {
-        super(coordinate);
+    public Rock(Coordinates position) {
+        super(position);
     }
 
     @Override
-    public char getSymbol() {
-        return '*';
+    public String getSymbol() {
+        return "🪨";
     }
 }
