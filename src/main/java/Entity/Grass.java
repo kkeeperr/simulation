@@ -5,8 +5,8 @@ import java.util.Random;
 public class Grass extends Entity {
     private final int density;
 
-    public Grass(Coordinate coordinate, int density) {
-        super(coordinate);
+    public Grass(Coordinates position) {
+        super(position);
         this.density = set_density();
     }
 
@@ -18,8 +18,8 @@ public class Grass extends Entity {
     }
 
     @Override
-    public char getSymbol() {
-        return '#';
+    public String getSymbol() {
+        return "\uD83C\uDF3F";
     }
 
     public int getDensity() {

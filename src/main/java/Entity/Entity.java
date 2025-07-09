@@ -1,15 +1,19 @@
 package Entity;
 
 public abstract class Entity {
-    Coordinate coordinate;
+    Coordinates position;
 
-    public Entity(Coordinate coordinate) {
-        this.coordinate = coordinate;
+    public Entity(Coordinates position) {
+        this.position = position;
     }
 
-    public Coordinate getCoordinate() {
-        return coordinate;
+    public void setPosition(Coordinates position) {
+        this.position = position;
     }
 
-    public abstract char getSymbol();
+    public Coordinates getPosition() {
+        return position;
+    }
+
+    public abstract String getSymbol();
 }
