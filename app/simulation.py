@@ -38,7 +38,7 @@ class Simulation:
         while self.paused:
             time.sleep(0.1)
 
-        os.system("cls")
+        os.system("clear" if os.name != "nt" else "cls")
         print("Нажмите SPACE для паузы!")
         self.map.render()
         print(f"Текущий ход: {self.moves_count}")
