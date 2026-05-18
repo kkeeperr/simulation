@@ -1,7 +1,5 @@
 from abc import ABC, abstractmethod
-from collections import deque
 
-from app.coordinates import Coordinates
 from app.entities.entity import Entity
 
 
