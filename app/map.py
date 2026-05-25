@@ -54,8 +54,8 @@ class Map:
                 coordinates = Coordinates(x, y)
                 if coordinates in self.map:
                     entity = self.map.get(coordinates)
-                    print(f"{self.MAP_BG} {entity.icon} ", end="")
+                    print(f"{self.MAP_BG}{entity.icon}", end="")
                 else:
-                    print(f"{self.MAP_BG}    ", end="")
+                    print(f"{self.MAP_BG}  ", end="")
 
             print(self.RESET_BG)
