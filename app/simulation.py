@@ -30,9 +30,12 @@ class Simulation:
         thread = threading.Thread(target=self.pause_simulation, daemon=True)
         thread.start()
 
-        while True:
-            self.moves_count += 1
-            self.next_turn()
+        try:
+            while True:
+                self.moves_count += 1
+                self.next_turn()
+        except KeyboardInterrupt:
+            print("\nСимуляция остановлена!")
 
     def next_turn(self):
         while self.paused:
@@ -47,6 +50,9 @@ class Simulation:
 
     def pause_simulation(self):
         while True:
-            key = readchar.readkey()
-            if key == " ":
-                self.paused = not self.paused
+            try:
+                key = readchar.readkey()
+                if key == " ":
+                    self.paused = not self.paused
+            except KeyboardInterrupt:
+                break
