@@ -58,4 +58,4 @@ class Map:
                 else:
                     print(f"{self.MAP_BG}  ", end="")
 
-            print(self.RESET_BG)
+            print(f' {self.RESET_BG}')
